@@ -6,6 +6,7 @@
   body{
     background: #252526;
     height: 100%;
+    font-family: 'Courier New', Courier, monospace;
   }
   /* NAV BAR */
   .navbar-itself{
@@ -14,7 +15,6 @@
     .navbar-brand{
         color: white;
         font-size: 30px;
-        font-family: 'Courier New', Courier, monospace;
     }
     .nav-link{
         color: white;
@@ -47,7 +47,7 @@
   
     font-size: 5rem;
     font-weight: 600;
-    font-family: 'Courier New', Courier, monospace;
+
     color: rgba(255, 252, 252, 0.648);
   }
   /* thid causes a glich effect  */
@@ -71,6 +71,7 @@
     10% { 
         width: 0%;
         color: rgb(227, 0, 0);
+        font-size: 2rem;
     }
     30%{ 
         color: rgb(255, 187, 0);
@@ -98,15 +99,14 @@
     100% {
         color: rgb(253, 255, 254);
         font-family: Georgia, Times, 'Times New Roman', serif;
-        font-size: 5rem;
+       
     }
-  } */
+  }  */
   
   /* prodcuts page  */
 
   /* product name */
   #pro-text{
-    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     text-decoration: underline;
     
@@ -127,14 +127,17 @@
     font-size:70px;
     font-weight: 900px;
     color:rgb(0, 0, 0);
-    font-family: 'Courier New', Courier, monospace;
-    background-image: linear-gradient(#3e4f50,rgb(94, 89, 89)) ;
-
+    /* background-image: linear-gradient(#3e4f50,rgb(94, 89, 89)) ; */
+    background-color: #3a3a51;
     border-radius: 20px;
     width: 30%;
-    /* background-image: url(https://i.postimg.cc/qvQm5qNS/red-and-white-sale.jpg); 
-    height: 10rem; */
-   
+  }
+  #banner:hover{
+    background: #c6f10a;
+    font-size: 10px;
+    border: 3px solid red;
+    font-size: 55px;
+  
   }
   /* on selected text */
   #pro-smText{
@@ -149,12 +152,16 @@
       float: left;
       background-color: #352e2efd;
       color: white;
-      /* font-family: 'Courier New', Courier, monospace; */
+      font-size: 15px;
+      font-style: italic;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     
 
   }
   /* .card:hover{
-    background: #20cd4b;
+    background: #000000;
     box-shadow: 16px 9px;
+  
   } */
   #addToCart{
     float: right;
@@ -184,7 +191,7 @@
     text-decoration: underline;
   }
   
-  footer{
+  /* footer{
   background-color: aqua;
   padding: 20px;
   text-align: center;
@@ -195,5 +202,48 @@
   bottom: 0;
   width: 100%;
   height: 2.5rem;    
-  
+  } */
+  /* Footer{
+    background: #ffffff;
+    color: white;
+    font-size: 20px;
+    height: 4rem;
+    position:relative;
+  } */
+
+
+  /* ABOUT US AND CONTACT SECTION */
+
+  .card-about{
+    margin: 5rem 2rem;
+    font-size: 2rem;
+  }
+  .aboutFoot{
+    background: #1e1e20;
+    color: white;
+    font-size: 20px;
+    height: 4rem;
+    position:relative;
+  }
+  .headingTags{
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 50px;
+  }
+
+  .form-label{
+    color: white;
+    font-style: italic;
+  }
+  /* the for itself */
+  .mb-3{
+    margin: auto;
+    width:55rem;
+  }
+  #submit{
+   border-radius: 7px;
+   font-size: 20px;
+   margin: 2px;
+   
   }
