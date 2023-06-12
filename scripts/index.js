@@ -61,6 +61,3 @@ productDisplayed.forEach((proD) => {
     </div>
   `;
 });
-
-const array = ["Joe", "Kevin", "Peter"];
-console.log(array.join(""));
