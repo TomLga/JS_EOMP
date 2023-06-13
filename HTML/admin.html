@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY SHOP</title>
-   <!-- adds logo to the tab favicpn -->
-   <link rel="shortcut icon" href="https://i.postimg.cc/jd7tXk9V/LT-logo.png" type="image/x-icon">
-   <!-- boot strap  -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY SHOP</title>
+  <!-- adds logo to the tab favicpn -->
+  <link rel="shortcut icon" href="https://i.postimg.cc/jd7tXk9V/LT-logo.png" type="image/x-icon">
+  <!-- boot strap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="../CSS/style.css">
 </head>
-<body>
+
+<body class="adminBody">
   <nav class="navbar navbarnavbar navbar-expand-lg">
-    <div class= "container-fluid navbar-itself">
+    <div class="container-fluid navbar-itself">
       <a class="navbar-brand">Admin</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav" >
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="../index.html">Home</a>
@@ -40,41 +44,56 @@
     </div>
   </nav>
 
-  <table>
-    <tr>
-      <th>item</th>
-      <th>product</th>
-      <th>description</th>
-      <th>price</th>
-      <th>edit</th>
-      <th>delete</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Maria Anders</td>
-      <td>Lorem ipsum asi enim re culpa Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore recusandae dolorem corporis soluta sequi culpa in voluptas. Possimus corrupti modi autem exercitationem? Natus maiores expedita dolor inventore necessitatibus dicta neque!</td>
-      <td>R457</td>
-      <td><button>edit</button></td>
-      <td><button>delete</button></td>
-    </tr>
-      <td>1</td>
-      <td>Maria Anders</td>
-      <td>Lorem ipsum asi enim re culpa Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore recusandae dolorem corporis soluta sequi culpa in voluptas. Possimus corrupti modi autem exercitationem? Natus maiores expedita dolor inventore necessitatibus dicta neque!</td>
-      <td>R457</td>
-      <td><button>edit</button></td>
-      <td><button>delete</button></td>
-    </tr>
-      <td>1</td>
-      <td>Maria Anders</td>
-      <td>Lorem ipsum asi enim re culpa Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore recusandae dolorem corporis soluta sequi culpa in voluptas. Possimus corrupti modi autem exercitationem? Natus maiores expedita dolor inventore necessitatibus dicta neque!</td>
-      <td>R457</td>
-      <td><button>edit</button></td>
-      <td><button>delete</button></td>
-    </tr>
-  </table>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <button data-bs-target="#add" type="button" data-bs-toggle="modal">ADD</button>
+      </div>
+    </div>
+    <div class="row">
+      <table>
+        <thead>
+          <td>id</td>
+          <td>Product</td>
+          <td>description</td>
+          <td>price</td>
+          <td>Edit</td>
+          <td>delete</td>
+        </thead>
+        <tbody id="adminTable">
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-<script src="../scripts/admin.js"></script>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+  </div>
+  <!-- Modal for Add -->
+  <div class="modal fade" id="add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Product</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- .input fields. -->
+          <input class="inputModal" type="number" id="id" placeholder="id">
+          <input class="inputModal" type="text" id="products" placeholder="products">
+          <input class="inputModal" type="text" id="description" placeholder="description">
+          <input class="inputModal" type="number" id="price" placeholder="price">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addItem()">ADD</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="/scripts/admin.js"></script>
 </body>
+
 </html>
