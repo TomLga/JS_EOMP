@@ -299,6 +299,7 @@ table{
 color: white;
 border: 2px solid;
 padding: 50px;
+
 }
 
 thead, td{
@@ -310,4 +311,40 @@ thead, td{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+/* chek=ckout page  */
+
+/* div holding the tables */
+#checkoutBox{
+  color: white;
+  background-color: rgb(35, 40, 40);
+  display: flex;
+  margin-top: 5rem;
+  /* justify-content: space-between; */
+
+
+}
+/* checkouted out products */
+.tableStreach1{
+  width: 40%;
+  background-color: rgb(12, 12, 12);
+  margin: auto;
+}
+/* billing information */
+.tableStreach{
+  width:20%;
+  height: fit-content;
+  margin: auto;
+  background-color: rgb(12, 12, 12);
+}
+#checkoutIntro{
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+}
+#checkoutBtn{
+  height: fit-content;
+ 
+ 
 }
