@@ -309,11 +309,11 @@ thead, td{
   padding: 12px;
 }
 
-.modal-body {
+/* .modal-body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-}
+} */
 
 /* chek=ckout page  */
 
@@ -356,4 +356,11 @@ thead, td{
 .proDuctCardCol{
  color: rgb(45, 22, 22);
  background: #776060;
+}
+
+
+/* modal button  */
+#recipient-name, #message-text{
+  width: fit-content;
+  margin: 0px;
 }
