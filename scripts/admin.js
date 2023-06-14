@@ -1,81 +1,101 @@
-function displayData() {
-    let data;
-    if(localStorage.getItem('data') == null) {
-        data = [];
-    }else {
-        data = JSON.parse(localStorage.getItem('data'))
-    }
+function addItemsToTable() {
+  let tableBody = document.getElementById("adminTableBody");
+  clearTable(); // Clear existing table rows
+  let products = JSON.parse(localStorage.getItem('products')) || [];
 
-    let output = document.querySelector('#adminTable')
-    output.innerHTML = '';
-    data.forEach((item) => { 
-        output.innerHTML += `
-        <tr>
-        <td>${item.id}</td>
-        <td>${item.products}</td>
-        <td>${item.description}</td>
-        <td>${item.price}</td>
-        <td><button type="button"data-bs-toggle="modal" data-bs-target="#edit">edit</button></td>
-        <td><button type="button" onclick="delbtn()">Delete</button></td>
-        </tr>
+  for (let i = 0; i < products.length; i++) {
+    let row = tableBody.insertRow(-1);
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    let cell3 = row.insertCell(2);
+    let cell4 = row.insertCell(3);
+    let cell5 = row.insertCell(4);
+    let cell6 = row.insertCell(5);
 
-        <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit table</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-      
-              <div class="modal-body">
-                <!-- .input fields. -->
-                <input class="inputModal" type="number" id="id" placeholder="id">
-                <input class="inputModal" type="text" id="products" placeholder="products">
-                <input class="inputModal" type="text" id="description" placeholder="description">
-                <input class="inputModal" type="number" id="price" placeholder="price">
-              </div>
-      
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="edit" onclick="editItem()">Edit</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        `
-    });
+    cell1.innerHTML = products[i].id;
+    cell2.innerHTML = products[i].name;
+    cell3.innerHTML = products[i].description;
+    cell4.innerHTML = products[i].price;
+
+    // Add Edit and Delete buttons if needed
+    // ...
+  }
 }
 
-document.onload = displayData();
-
-function addItem() {
-    let id = document.querySelector('#id').value;
-    let products = document.querySelector('#products').value;
-    let description = document.querySelector('#description').value;
-    let price = document.querySelector('#price').value;
-
-    let data;
-    if(localStorage.getItem('data') == null) {
-        data = [];
-    }else {
-        data = JSON.parse(localStorage.getItem('data'))
-    }
-
-    data.push({
-        id: id,
-        products: products,
-        description: description,
-        price: price
-    })
-
-    localStorage.setItem('data', JSON.stringify(data));
-    displayData();
-
-    id = document.querySelector('#id').value = '';
-    products = document.querySelector('#products').value = '';
-    description = document.querySelector('#description').value = '';
-    price = document.querySelector('#price').value = '';
+function clearTable() {
+  let tableBody = document.getElementById("adminTableBody");
+  tableBody.innerHTML = "";
 }
+
+function addItemsToProductsContainer() {
+  let productsContainer = document.getElementById("productsContainer");
+  clearProductsContainer(); // Clear existing cards
+  let products = JSON.parse(localStorage.getItem('products')) || [];
+
+  for (let i = 0; i < products.length; i++) {
+    let product = products[i];
+
+    let card = document.createElement("div");
+    card.classList.add("card");
+    card.style.width = "18rem";
+
+    let cardBody = document.createElement("div");
+    cardBody.classList.add("card-body");
+
+    cardBody.innerHTML =
+      "<h5 class='card-title'>" + product.name + "</h5>" +
+      "<p class='card-text'><strong>ID:</strong> " + product.id + "</p>" +
+      "<p class='card-text'><strong>Description:</strong> " + product.description + "</p>" +
+      "<p class='card-text'><strong>Price:</strong> $" + product.price + "</p>";
+
+    card.appendChild(cardBody);
+    productsContainer.appendChild(card);
+  }
+}
+
+function clearProductsContainer() {
+  let productsContainer = document.getElementById("productsContainer");
+  productsContainer.innerHTML = "";
+}
+
+function saveProduct(product) {
+  let products = JSON.parse(localStorage.getItem('products')) || [];
+  products.push(product);
+  localStorage.setItem('products', JSON.stringify(products));
+}
+
+function addProduct(event) {
+  event.preventDefault();
+
+  let id = document.getElementById("id").value;
+  let name = document.getElementById("name").value;
+  let description = document.getElementById("description").value;
+  let price = document.getElementById("price").value;
+
+  let product = {
+    id: id,
+    name: name,
+    description: description,
+    price: price
+  };
+
+  saveProduct(product);
+  clearForm();
+  location.reload();
+}
+
+function clearForm() {
+  document.getElementById("id").value = "";
+  document.getElementById("name").value = "";
+  document.getElementById("description").value = "";
+  document.getElementById("price").value = "";
+}
+
+window.onload = function() {
+  let products = JSON.parse(localStorage.getItem('products')) || [];
+  addItemsToTable();
+  addItemsToProductsContainer();
+};
 
 
 // to edit the product list 
