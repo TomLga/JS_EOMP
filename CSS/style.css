@@ -2,6 +2,8 @@
   margin:0;
   padding:0%;
   box-sizing: border-box;
+
+  /* background-color: beige; */
 }
 body{
   background: #252526;
@@ -346,5 +348,12 @@ thead, td{
 #checkoutBtn{
   height: fit-content;
  
- 
+}
+
+
+/* product page color for testin */
+
+.proDuctCardCol{
+ color: rgb(45, 22, 22);
+ background: #776060;
 }
