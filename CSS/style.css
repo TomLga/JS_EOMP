@@ -322,10 +322,8 @@ height: 2.5rem;
 
 
 /* ADMIN PAGE */
-/* for testing purposes. DELETE AFTER */
-.adminBody{
-  background-color: rgb(52, 116, 212);
-}
+
+
 
 table{
 color: white;
@@ -384,8 +382,8 @@ thead, td{
 /* product page color for testin */
 
 .proDuctCardCol{
- color: rgb(45, 22, 22);
- background: #776060;
+ color: rgb(252, 248, 248);
+ 
 }
 
 
@@ -398,19 +396,23 @@ thead, td{
 /* new csssssssss */
 
 div.newCard{
-  background-color: aquamarine;
+  background-color:#131315;
   padding: 9px;
   margin: 9px;
   width: 25rem;
-  height: fit-content;
+  
+  
  
 }
 .newCardImg{
-  width: 20rem;
+  width: 100%;
+  height: 45vh;
+  
 }
 
 .body-newCard{
-  background-color: #d9b7b7;
+  background-color: #1b1b1c;
+  padding:4px;
 }
 .title-newCard{
   text-decoration: underline;
@@ -421,6 +423,24 @@ div.newCard{
 #productData{
   display:flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
   
+}
+.crud-btn{
+  /* border: none; */
+  background-color: rgb(150, 99, 99);
+  padding: 2px;
   
+}
+
+.addProdBtn{
+  width:15rem;
+  background-color: rgb(150, 90, 99);
+
+}
+
+#adminSection h1{
+  color: aliceblue;
 }

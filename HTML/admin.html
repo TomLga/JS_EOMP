@@ -33,7 +33,7 @@
             <a class="nav-link" aria-current="page" href="./HTML/AboutContact.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#contactPage">Contact</a>
+            <a class="nav-link" aria-current="page" href="../HTML/AboutContact.html">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./HTML/admin.html">Admin</a>
@@ -45,13 +45,14 @@
 
   <!-- onsubmit="addProduct(event)" -->
   <section id="adminSection">
-    <form  id="form">
+    <h1>Administration</h1>
+    <form class="formCSS" id="form">
       <input type="text" id="id" required placeholder="Enter ID">
+      <input type="url" id="imageofProduct" placeholder="Insert url">
       <input type="text" id="name" placeholder="Enter product name" required>
-      <!-- <input type="url" id="imageofProduct" placeholder="Insert url"> -->
       <input type="text" id="description" placeholder="Enter Description" required>
       <input type="number" id="price" placeholder="Enter price" required>
-      <button type="button" id="submit" class="btn btn-primary">Add Product</button>
+      <button type="button" id="submit" class="addProdBtn" >Add Product</button>
     </form>
 
     <table id="adminTable">
