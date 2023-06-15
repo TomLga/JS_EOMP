@@ -58,7 +58,7 @@ function showData(){
     productData.innerHTML += 
     `
     <div class="newCard"">
-    <img class="newCardImg"src="${data.Image}"">
+    <img class="newCardImg" src="${data.Image}">
     <div class="body-newCard">
       <h5 class="title-newCard">${data.Title}</h5>
       <p class="text-newCard">${data.Description }</p>
@@ -68,9 +68,4 @@ function showData(){
     `
   })
 }
-showData()
-{/*
-
-
-
-*/}
+showData();
