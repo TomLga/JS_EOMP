@@ -126,7 +126,7 @@ body{
 #landingFoot{
   margin-top: 5rem;
 
-  background:#1e1e20;
+  background-image: linear-gradient(#2c3a3b,rgba(12,12,14,255)) ;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -443,4 +443,8 @@ div.newCard{
 
 #adminSection h1{
   color: aliceblue;
+}
+
+div#NavBarBG.container-fluid{
+  background-color: aqua;
 }

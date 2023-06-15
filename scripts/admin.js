@@ -17,12 +17,12 @@ function showProducts(){
     `
     <tr>
       <td>${data.id}</td>
-      <td><img scr="${data.Image}" alt="${data.Title}"></td>
+      <td><img scr="${data.Image}" alt="${data.Title}"> 
       <td>${data.Title}</td>
       <td>${data.Description}</td>
       <td>${data.price}</td>
-      <td><button class="crud-btn">✍️</button></td>
-      <td><button class="crud-btn">🗑️</button></td>
+      <td><button onclick="editRow()"class="crud-btn">✍️</button></td>
+      <td><button onclick="deleteRow()"class="crud-btn">🗑️</button></td>
     </tr>
     `
   })
@@ -50,3 +50,11 @@ btn.addEventListener('click', ()=>{
 console.log(productDisplayed);
 
 
+
+
+function editRow(){
+  alert("hello edit")
+}
+function deleteRow(){
+  alert("hello delete")
+}
