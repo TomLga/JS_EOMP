@@ -43,22 +43,23 @@
     </div>
   </nav>
 
+  <!-- onsubmit="addProduct(event)" -->
   <section id="adminSection">
-    <form onsubmit="addProduct(event)">
+    <form  id="form">
       <input type="text" id="id" required placeholder="Enter ID">
       <input type="text" id="name" placeholder="Enter product name" required>
       <!-- <input type="url" id="imageofProduct" placeholder="Insert url"> -->
       <input type="text" id="description" placeholder="Enter Description" required>
       <input type="number" id="price" placeholder="Enter price" required>
-      <button type="submit">Add Product</button>
+      <button type="button" id="submit" class="btn btn-primary">Add Product</button>
     </form>
 
     <table id="adminTable">
       <thead>
         <tr>
           <th>id</th>
+          <th>image</th>
           <th>Product</th>
-          <!-- <th>image</th> -->
           <th>Description</th>
           <th>Price</th>
           <th>Edit</th>

@@ -34,7 +34,7 @@ body{
 
 
 
-/* landing page */
+/* landing page */ 
 #intro-pic{
   opacity: 0.50;
   margin-bottom: 2rem;
@@ -136,7 +136,37 @@ body{
 }
 
 
+@media only screen and (max-width: 860px) {
+  .top-text {
+      font-size: 2rem ;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .top-text {
+      font-size: 1rem ;
+  }
+}
+@media only screen and (max-width: 650px){
 
+  Foot{
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: white;
+      text-align: center;
+  }
+  .navbar-brand{
+      font-size: 15px;
+  }
+  .logo{
+      width: 3rem;
+  }
+  .card-about{
+      background-color: aliceblue;
+  }
+}
+  
 
 /* prodcuts page  */
 
@@ -208,7 +238,7 @@ body{
 
 /* to get the cartd and img all the same  */
 .cardImg{
-  width: 100%;
+  width: 1%;
   height: 45vh;
   /* object-fit: cover; */
 }
@@ -267,7 +297,7 @@ height: 2.5rem;
   font-size: 2.5rem;
 }
 /* the for itself */
-.mb-3{
+.mb-3-contactForm{
   margin: auto;
   width:55rem;
   height: 12rem;
@@ -363,4 +393,34 @@ thead, td{
 #recipient-name, #message-text{
   width: fit-content;
   margin: 0px;
+}
+
+/* new csssssssss */
+
+div.newCard{
+  background-color: aquamarine;
+  padding: 9px;
+  margin: 9px;
+  width: 25rem;
+  height: fit-content;
+ 
+}
+.newCardImg{
+  width: 20rem;
+}
+
+.body-newCard{
+  background-color: #d9b7b7;
+}
+.title-newCard{
+  text-decoration: underline;
+}
+.text-newCard{
+  font-weight: 800;
+}
+#productData{
+  display:flex;
+  flex-wrap: wrap;
+  
+  
 }
