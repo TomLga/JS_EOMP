@@ -4,7 +4,7 @@ JSON.parse(localStorage.getItem('data')) ?
 JSON.parse(localStorage.getItem('data')) :localStorage.setItem('data', JSON.stringify([
   {
    id: 1,
-   Image:"https://iili.io/JMcj7se.jpg",
+   Image:"https://i.postimg.cc/Kv4HjFZk/Acer-Predator-Z35.jpg",
    Title: "Acer Predator Z35 35-inch Curved Full HD (2560 x 1080) ",
    Description:"The Predator Z35 curved screen transforms your viewing experience drawing you deep into the action with NVIDIA G-SYNC tech eliminates screen tearing for an epic gaming experience",
    price:"R37 720"
